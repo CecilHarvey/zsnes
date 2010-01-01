@@ -3,7 +3,6 @@
 //  zsnes
 //
 //  Created by Daniel Potter on 12/31/09.
-//  Copyright 2009 MITRE. All rights reserved.
 //
 
 #import "AboutDialog.h"
