@@ -1,0 +1,9 @@
+/* config.h.  Generated from config.h.in by configure.  */
+/* #undef TIME_WITH_SYS_TIME */
+/* #undef HAVE_SYS_TIME_H */
+/* #undef HAVE_DIRENT_H */
+/* #undef HAVE_SYS_NDIR_H */
+/* #undef HAVE_SYS_DIR_H */
+/* #undef HAVE_NDIR_H */
+/* #undef HAVE_MEMCPY */
+/* #undef HAVE_UNISTD_H */
