@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		256AC3DA0F4B6AC300CF3369 /* zsnesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* zsnesAppDelegate.m */; };
-		2719105410EB274D0067A883 /* MacUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 2719105310EB274D0067A883 /* MacUI.m */; };
 		2743766710E8672100D42B95 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2743765110E866AB00D42B95 /* OpenGL.framework */; };
 		2743766D10E8672C00D42B95 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2743766C10E8672C00D42B95 /* Cocoa.framework */; };
 		2743767110E8673300D42B95 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2743767010E8673300D42B95 /* ApplicationServices.framework */; };
@@ -352,8 +350,11 @@
 		274382E810E8A12500D42B95 /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2743767E10E8674A00D42B95 /* AudioUnit.framework */; };
 		274382E910E8A12500D42B95 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2743767510E8673A00D42B95 /* Carbon.framework */; };
 		274382EA10E8A12500D42B95 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2743768210E8675500D42B95 /* IOKit.framework */; };
+		274842C510EE8FA200B6D76E /* AboutDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 274842C010EE8FA200B6D76E /* AboutDialog.m */; };
+		274842C610EE8FA200B6D76E /* MacUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 274842C210EE8FA200B6D76E /* MacUI.m */; };
+		274842C710EE8FA200B6D76E /* zsnesAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 274842C410EE8FA200B6D76E /* zsnesAppDelegate.m */; };
+		2748432910EE966300B6D76E /* AboutLinks.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 2748432710EE966300B6D76E /* AboutLinks.rtf */; };
 		274DCF3410ED2B3400CD53EF /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 274DCF3210ED2B3400CD53EF /* About.xib */; };
-		274DD04F10ED365300CD53EF /* AboutDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = 274DD04E10ED365300CD53EF /* AboutDialog.m */; };
 		277DB16F10E941D7009672CD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2743814310E8848100D42B95 /* libz.dylib */; };
 		277DB17810E9444B009672CD /* debugger.c in Sources */ = {isa = PBXBuildFile; fileRef = 274380F210E8817F00D42B95 /* debugger.c */; };
 		277DB17A10E9446A009672CD /* libcurses.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 277DB17910E9446A009672CD /* libcurses.dylib */; };
@@ -411,11 +412,7 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		256AC3D80F4B6AC300CF3369 /* zsnesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zsnesAppDelegate.h; sourceTree = "<group>"; };
-		256AC3D90F4B6AC300CF3369 /* zsnesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zsnesAppDelegate.m; sourceTree = "<group>"; };
-		256AC3F00F4B6AF500CF3369 /* zsnes_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zsnes_Prefix.pch; sourceTree = "<group>"; };
-		2719105210EB274D0067A883 /* MacUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacUI.h; sourceTree = "<group>"; };
-		2719105310EB274D0067A883 /* MacUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacUI.m; sourceTree = "<group>"; };
+		256AC3F00F4B6AF500CF3369 /* zsnes_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zsnes_Prefix.pch; path = macosx/zsnes_Prefix.pch; sourceTree = "<group>"; };
 		27436FE710E85B4700D42B95 /* SDL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27436FE810E85B4700D42B95 /* SDL-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SDL-Info.plist"; sourceTree = "<group>"; };
 		2743765110E866AB00D42B95 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -862,6 +859,13 @@
 		274381B410E88AC300D42B95 /* md.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = md.c; sourceTree = "<group>"; };
 		274381B510E88AC300D42B95 /* md.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md.h; sourceTree = "<group>"; };
 		274381DF10E8905000D42B95 /* zsnes.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = zsnes.icns; sourceTree = "<group>"; };
+		274842BF10EE8FA200B6D76E /* AboutDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutDialog.h; path = macosx/AboutDialog.h; sourceTree = "<group>"; };
+		274842C010EE8FA200B6D76E /* AboutDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutDialog.m; path = macosx/AboutDialog.m; sourceTree = "<group>"; };
+		274842C110EE8FA200B6D76E /* MacUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacUI.h; path = macosx/MacUI.h; sourceTree = "<group>"; };
+		274842C210EE8FA200B6D76E /* MacUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MacUI.m; path = macosx/MacUI.m; sourceTree = "<group>"; };
+		274842C310EE8FA200B6D76E /* zsnesAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zsnesAppDelegate.h; path = macosx/zsnesAppDelegate.h; sourceTree = "<group>"; };
+		274842C410EE8FA200B6D76E /* zsnesAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = zsnesAppDelegate.m; path = macosx/zsnesAppDelegate.m; sourceTree = "<group>"; };
+		2748432810EE966300B6D76E /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/AboutLinks.rtf; sourceTree = "<group>"; };
 		274DCF3310ED2B3400CD53EF /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/About.xib; sourceTree = "<group>"; };
 		274DCF8310ED2D4400CD53EF /* cheat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cheat.png; sourceTree = "<group>"; };
 		274DCF8410ED2D4400CD53EF /* config.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = config.png; sourceTree = "<group>"; };
@@ -893,8 +897,6 @@
 		274DCFA010ED2D4400CD53EF /* shared.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = shared.css; sourceTree = "<group>"; };
 		274DCFBD10ED2D6F00CD53EF /* ZSNESHelpBook.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = ZSNESHelpBook.html; path = English.lproj/ZSNESHelpBook/ZSNESHelpBook.html; sourceTree = "<group>"; };
 		274DCFCB10ED2EF300CD53EF /* macosx_help.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = macosx_help.css; sourceTree = "<group>"; };
-		274DD04D10ED365300CD53EF /* AboutDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutDialog.h; sourceTree = "<group>"; };
-		274DD04E10ED365300CD53EF /* AboutDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutDialog.m; sourceTree = "<group>"; };
 		277DB17910E9446A009672CD /* libcurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurses.dylib; path = usr/lib/libcurses.dylib; sourceTree = SDKROOT; };
 		27B53BD210EDDE0D008B6544 /* rom.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = rom.icns; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
@@ -949,12 +951,10 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				256AC3D80F4B6AC300CF3369 /* zsnesAppDelegate.h */,
-				256AC3D90F4B6AC300CF3369 /* zsnesAppDelegate.m */,
-				2719105210EB274D0067A883 /* MacUI.h */,
-				2719105310EB274D0067A883 /* MacUI.m */,
-				274DD04D10ED365300CD53EF /* AboutDialog.h */,
-				274DD04E10ED365300CD53EF /* AboutDialog.m */,
+				274842BF10EE8FA200B6D76E /* AboutDialog.h */,
+				274842C010EE8FA200B6D76E /* AboutDialog.m */,
+				274842C310EE8FA200B6D76E /* zsnesAppDelegate.h */,
+				274842C410EE8FA200B6D76E /* zsnesAppDelegate.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -973,6 +973,8 @@
 				2743767E10E8674A00D42B95 /* AudioUnit.framework */,
 				2743768210E8675500D42B95 /* IOKit.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				2743814310E8848100D42B95 /* libz.dylib */,
+				277DB17910E9446A009672CD /* libcurses.dylib */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -1945,8 +1947,6 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				2743814310E8848100D42B95 /* libz.dylib */,
-				277DB17910E9446A009672CD /* libcurses.dylib */,
 			);
 			name = zsnes;
 			sourceTree = "<group>";
@@ -1954,6 +1954,8 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				274842C110EE8FA200B6D76E /* MacUI.h */,
+				274842C210EE8FA200B6D76E /* MacUI.m */,
 				256AC3F00F4B6AF500CF3369 /* zsnes_Prefix.pch */,
 			);
 			name = "Other Sources";
@@ -1968,6 +1970,7 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				274DCF3210ED2B3400CD53EF /* About.xib */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
+				2748432710EE966300B6D76E /* AboutLinks.rtf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -2183,9 +2186,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				8D1107260486CEB800E47090 /* zsnes */,
 				2743812610E881C200D42B95 /* parsegen */,
 				27436FE610E85B4700D42B95 /* SDL */,
-				8D1107260486CEB800E47090 /* zsnes */,
 			);
 		};
 /* End PBXProject section */
@@ -2210,6 +2213,7 @@
 				274381E010E8905000D42B95 /* zsnes.icns in Resources */,
 				274DCF3410ED2B3400CD53EF /* About.xib in Resources */,
 				27B53BD310EDDE0D008B6544 /* rom.icns in Resources */,
+				2748432910EE966300B6D76E /* AboutLinks.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2359,7 +2363,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				256AC3DA0F4B6AC300CF3369 /* zsnesAppDelegate.m in Sources */,
 				2743802110E87EE000D42B95 /* 7110proc.asm in Sources */,
 				2743802210E87EE000D42B95 /* c4emu.c in Sources */,
 				2743802310E87EE000D42B95 /* c4proc.asm in Sources */,
@@ -2471,8 +2474,9 @@
 				274381B710E88AC300D42B95 /* input.c in Sources */,
 				274381B810E88AC300D42B95 /* md.c in Sources */,
 				277DB17810E9444B009672CD /* debugger.c in Sources */,
-				2719105410EB274D0067A883 /* MacUI.m in Sources */,
-				274DD04F10ED365300CD53EF /* AboutDialog.m in Sources */,
+				274842C510EE8FA200B6D76E /* AboutDialog.m in Sources */,
+				274842C610EE8FA200B6D76E /* MacUI.m in Sources */,
+				274842C710EE8FA200B6D76E /* zsnesAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2506,6 +2510,14 @@
 				1DDD58150DA1D0A300B32029 /* English */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		2748432710EE966300B6D76E /* AboutLinks.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2748432810EE966300B6D76E /* English */,
+			);
+			name = AboutLinks.rtf;
 			sourceTree = "<group>";
 		};
 		274DCF3210ED2B3400CD53EF /* About.xib */ = {
@@ -2553,6 +2565,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = SDL;
 				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
@@ -2589,6 +2602,7 @@
 				PREBINDING = NO;
 				PRODUCT_NAME = SDL;
 				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = i386;
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -2638,7 +2652,7 @@
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = zsnes_Prefix.pch;
+				GCC_PREFIX_HEADER = macosx/zsnes_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					__OPENGL__,
 					__MACOSX__,
@@ -2684,7 +2698,7 @@
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = zsnes_Prefix.pch;
+				GCC_PREFIX_HEADER = macosx/zsnes_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					__OPENGL__,
 					__MACOSX__,
@@ -2721,7 +2735,7 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -2729,18 +2743,20 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64";
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+				VALID_ARCHS = "i386 ppc ppc64 ppc7400 ppc970 x86_64";
 			};
 			name = Release;
 		};

@@ -1308,8 +1308,12 @@ float sem_GetTicks()
   return(ticks);
 }
 
+#ifdef __MACOSX__
 
+// MacOSX uses Cocoa for LaunchURL, which involves Objective C:
+void LaunchURL(const char*);
 
+#else
 void LaunchBrowser(char *browser, char *url)
 {
   char *const arglist[] = { browser, url, 0 };
@@ -1338,6 +1342,7 @@ void LaunchURL(char *url)
 
   _exit(0); //All browser launches failed, oh well
 }
+#endif
 
 void ZsnesPage()
 {

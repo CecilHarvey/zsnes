@@ -7,7 +7,7 @@
 
 #import "MacUI.h"
 
-void macos_alert(char* format, ...) {
+void macos_alert(const char* format, ...) {
 	va_list args;
 	va_start(args, format);
 	NSString* message = [[NSString alloc]
@@ -19,4 +19,9 @@ void macos_alert(char* format, ...) {
 	[alert runModal];
 	[alert release];
 	[message release];
+}
+
+void LaunchURL(const char* aUrl) {
+	NSURL* url = [NSURL URLWithString:[NSString stringWithUTF8String:aUrl]];
+	[[NSWorkspace sharedWorkspace] openURL: url];
 }
