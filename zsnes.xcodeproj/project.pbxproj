@@ -6,6 +6,20 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		278E401C10F5C4DB000E6592 /* Distributable */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 278E401F10F5C4F9000E6592 /* Build configuration list for PBXAggregateTarget "Distributable" */;
+			buildPhases = (
+				278E401B10F5C4DB000E6592 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Distributable;
+			productName = Distributable;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		2743766710E8672100D42B95 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2743765110E866AB00D42B95 /* OpenGL.framework */; };
@@ -898,6 +912,7 @@
 		274DCFBD10ED2D6F00CD53EF /* ZSNESHelpBook.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = ZSNESHelpBook.html; path = English.lproj/ZSNESHelpBook/ZSNESHelpBook.html; sourceTree = "<group>"; };
 		274DCFCB10ED2EF300CD53EF /* macosx_help.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = macosx_help.css; sourceTree = "<group>"; };
 		277DB17910E9446A009672CD /* libcurses.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcurses.dylib; path = usr/lib/libcurses.dylib; sourceTree = SDKROOT; };
+		278E402010F5C602000E6592 /* dist.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = dist.sh; sourceTree = "<group>"; };
 		27B53BD210EDDE0D008B6544 /* rom.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = rom.icns; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -1957,6 +1972,7 @@
 				274842C110EE8FA200B6D76E /* MacUI.h */,
 				274842C210EE8FA200B6D76E /* MacUI.m */,
 				256AC3F00F4B6AF500CF3369 /* zsnes_Prefix.pch */,
+				278E402010F5C602000E6592 /* dist.sh */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -2189,6 +2205,7 @@
 				8D1107260486CEB800E47090 /* zsnes */,
 				2743812610E881C200D42B95 /* parsegen */,
 				27436FE610E85B4700D42B95 /* SDL */,
+				278E401C10F5C4DB000E6592 /* Distributable */,
 			);
 		};
 /* End PBXProject section */
@@ -2246,6 +2263,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Copy the help book over and index it if needed\n\nHELP_RES_DIR=\"$TARGET_BUILD_DIR/$UNLOCALIZED_RESOURCES_FOLDER_PATH\"\nHELP_INDEX=\"$HELP_RES_DIR/English.lproj/ZSNESHelpBook/ZSNESHelpBook.helpindex\"\nNEED_HELP_REBUILD=\"\"\n\nfor FILE in `find \"$PROJECT_DIR/English.lproj/ZSNESHelpBook\" -type d -and -not -path '*/.*'`; do mkdir -p \"$HELP_RES_DIR${FILE:${#PROJECT_DIR}}\"; done\nfor FILE in `find \"$PROJECT_DIR/English.lproj/ZSNESHelpBook\" -type f -and -not -path '*/.*' -and -not -name '*~'`; do\n\tcp \"$FILE\" \"$HELP_RES_DIR${FILE:${#PROJECT_DIR}}\"\n\t# Also check if it's newer than the index file\n\tif [ \"$FILE\" -nt \"$HELP_INDEX\" ] ; then NEED_HELP_REBUILD=\"yes\"; fi\ndone\n\nHELP_RES_DIR=\"$HELP_RES_DIR/English.lproj/ZSNESHelpBook\"\n\n# Index the help documents if needed\n\nif [ ! -e \"$HELP_INDEX\" ] || [ -n \"$NEED_HELP_REBUILD\" ] ; then\n\t# In a totally not obnoxious way, 10.6 replaces the help indexer with \"hiutil\"\n\tHELPINDEXER=\"`which hiutil`\"\n\n\tif [ -n \"$HELPINDEXER\" ] ; then\n\t\techo \"Building help index (hiutil)...\"\n\t\t\"$HELPINDEXER\" -Cf \"$HELP_INDEX\" \"$HELP_RES_DIR\"\n\telse\n\t\techo \"Building help index (Help Indexer)...\"\n\t\t\"$DEVELOPER_APPLICATIONS_DIR/Utilities/Help Indexer.app/Contents/MacOS/Help Indexer\" \"$HELP_RES_DIR\"\n\tfi\n\ttouch \"$HELP_INDEX\"\nfi\n";
+		};
+		278E401B10F5C4DB000E6592 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\nexit 0";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2637,6 +2667,27 @@
 			};
 			name = Release;
 		};
+		278E401D10F5C4DB000E6592 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = Distributable;
+			};
+			name = Debug;
+		};
+		278E401E10F5C4DB000E6592 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = Distributable;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2777,6 +2828,15 @@
 			buildConfigurations = (
 				2743812910E881C300D42B95 /* Debug */,
 				2743812A10E881C300D42B95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		278E401F10F5C4F9000E6592 /* Build configuration list for PBXAggregateTarget "Distributable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				278E401D10F5C4DB000E6592 /* Debug */,
+				278E401E10F5C4DB000E6592 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
