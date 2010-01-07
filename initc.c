@@ -56,9 +56,11 @@ Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
 #endif
 
 //C++ style code in C
+#ifndef bool
 #define bool unsigned char
 #define true 1
 #define false 0
+#endif
 
 //NSRT Goodness
 #define Lo 0x7FC0

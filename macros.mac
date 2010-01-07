@@ -72,7 +72,7 @@ section .note.GNU-stack noalloc noexec nowrite progbits
 %endif
 
 %macro ALIGN32 0
-  times 20h - (($$-$) & 1Fh) nop    ; Long word alignment
+  times ($$-$) & 1Fh nop    ; Long word alignment
 %endmacro
 %macro ALIGN16 0
   times ($$-$) & 1Fh nop    ; Long word alignment

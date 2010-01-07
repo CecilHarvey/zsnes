@@ -23,7 +23,6 @@ void powercycle(bool, bool);
 	self = [super init];
 	if (self) {
 		haveLaunched = NO;
-		cartpath = nil;
 	}
 	return self;
 }
