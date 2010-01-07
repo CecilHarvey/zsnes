@@ -9,7 +9,6 @@
 
 @interface zsnesAppDelegate : NSObject <NSApplicationDelegate> {
     NSWindow *window;
-	char* cartpath;
 	BOOL haveLaunched;
 }
 

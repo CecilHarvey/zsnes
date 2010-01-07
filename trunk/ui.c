@@ -347,12 +347,15 @@ static void allocmem()
   regptw -= 0x8000;
 }
 
+// I'm sure there's a *really* good reason the version number is written as hex
+// and not the decimal 151. Yeah.
 const unsigned int versionNumber = 0x00000097; // 1.51
 char *ZVERSION = "1.51";
 unsigned char txtfailedalignd[] = "Data Alignment Failure : ";
 unsigned char txtfailedalignc[] = "Code Alignment Failure : ";
 
 #ifdef __MACOSX__
+void macos_alert(const char*, ...);
 #define ALERT(format, args...)	macos_alert(format , ## args)
 #else
 #define ALERT(format, args...)	printf(format , ## args); \
